@@ -77,16 +77,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myproject',
-        'USER':'root',
-        'PASSWORD':'',
-        'HOST':'localhost',
-        'POST':''
-    }
-}
+
 
 DATABASES['default'] = dj_database_url.config(default='postgres://sjfbxrqsiulrli:68984c3a1070a75cca223bb343acc21ea2f418a4d8a3e02e88c39b68448a3836@ec2-34-232-191-133.compute-1.amazonaws.com:5432/d3500b52ekilusg')
 
