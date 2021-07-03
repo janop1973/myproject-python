@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h2 align="center">ลงทะเบียนสำหรับผู้ที่จะเดินทางเข้าจังหวัดสงขลา</h2>
+<form action="addForm" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="">ชื่อ</label>
+        <input type="text" class="form-control" name="firstname">
+    </div>
+
+    <div class="form-group">
+        <label for="">นามสกุล</label>
+        <input type="text" class="form-control" name="lastname">
+    </div>
+
+    <div class="form-group">
+        <label for="">Citizen ID/Passport</label>
+        <input type="text" class="form-control" name="passport">
+    </div>
+
+    <div class="form-group">
+        <label for="">เบอร์โทรศัพท์</label>
+        <input type="tel" class="form-control" name="tel">
+    </div>
+
+    <div class="form-group">
+        <label for="">ประเทศ(*ถ้ามาจากต่างประเทศ)</label>
+        <input type="text" class="form-control" name="country">
+    </div>
+
+    <div class="form-group">
+        <label for="">เดินทางมาจาก จังหวัด</label>
+        <input type="text" class="form-control" name="comeform">
+    </div>
+
+    <div class="form-group">
+        <label for="">อำเภอ</label>
+        <input type="text" class="form-control" name="district">
+    </div>
+
+    <div class="form-group">
+        <label for="">ตำบล</label>
+        <input type="text" class="form-control" name="canton">
+    </div>
+
+    <div class="form-group">
+        <label for="">ปลายทาง จังหวัด</label>
+        <input type="text" class="form-control" name="terminus">
+    </div>
+
+    <div class="form-group">
+        <label for="">อำเภอที่จะไป</label>
+        <input type="text" class="form-control" name="ldistrict">
+    </div>
+
+    <div class="form-group">
+        <label for="">ตำบลที่จะไป</label>
+        <input type="text" class="form-control" name="lcanton">
+    </div>
+
+    <div class="form-group">
+        <label for="img">Select image:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+    </div>
+    <br>
+    <input type="submit" value="บันทึก" class="btn btn-primary">
+    {% if massages %}
+    {% for massage in massages %}
+        {{massage}}
+    {% endfor %}
+    {% endif %}
+
+</form>
+
+{% endblock %}
