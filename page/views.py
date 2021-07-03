@@ -33,6 +33,6 @@ def addPage(request):
             saverecord.image=request.POST.get('image')
             saverecord.save()
             messages.success(request,'บันทึกเรียบร้อย')
-            return render(request,'result.html')
+            return render(request,'index.html')
     else:
-            return render(request,'reuslt.html')
+            return render(request,'index.html')
