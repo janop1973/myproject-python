@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-h@pven9%8s28v1%w6ynf+=9g!3+v1zqg3hyyab*cfm1clds^!1'
+SECRET_KEY = 'g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://mighty-atoll-94938.herokuapp.com/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -88,7 +88,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.config(default='postgres://sjfbxrqsiulrli:68984c3a1070a75cca223bb343acc21ea2f418a4d8a3e02e88c39b68448a3836@ec2-34-232-191-133.compute-1.amazonaws.com:5432/d3500b52ekilus')
+DATABASES['default'] = dj_database_url.config(default='postgres://sjfbxrqsiulrli:68984c3a1070a75cca223bb343acc21ea2f418a4d8a3e02e88c39b68448a3836@ec2-34-232-191-133.compute-1.amazonaws.com:5432/d3500b52ekilusg')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
