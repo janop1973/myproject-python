@@ -6,7 +6,7 @@ class Post(models.Model):
     firstname=models.CharField(max_length=255)
     lastname=models.CharField(max_length=255)
     passport=models.CharField(max_length=18)
-    tel=models.IntegerField()
+    tel=models.CharField(max_length=18)
     country=models.CharField(max_length=255, default='-')
     comeform=models.TextField()
     district=models.CharField(max_length=255, default='-')
