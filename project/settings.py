@@ -134,4 +134,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 JET_PROJECT = 'myproject_26'
-JET_TOKEN = 'd9425e5c-9335-4722-8daa-a9446e3f33d1'
+JET_TOKEN = '67ae18fe-8b41-467d-89e8-9824fcc26412'
